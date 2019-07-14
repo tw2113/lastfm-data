@@ -7,8 +7,9 @@ $api_key = '';
 
 $status = json_decode(
 	file_get_contents(
-		"http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=tw2113&limit=200&extended=1&format=json&from={$start}&to={$end}&api_key={$api_key}";
-) );
+		"http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=tw2113&limit=200&extended=1&format=json&from={$start}&to={$end}&api_key={$api_key}"
+	)
+);
 
 $totalpages = $status->recenttracks->{'@attr'}->totalPages;
 
